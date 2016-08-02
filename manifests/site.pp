@@ -49,7 +49,10 @@ node default {
     ensure => file,
     owner => 'bocinskij',
     content => "learning about puppets", }
-  package { "cowsay":
+  package { 'cowsay':
     ensure => present,
     provider => gem, }
+  exec { "cowsay 'Welcome to Earf' > /etc/motd":
+    creates => '/etc/motd',
+    path => '/usr/bin:usr/local/bin', }
 }
