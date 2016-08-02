@@ -44,5 +44,5 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
 }
-  notify { "Hello, Jesse": }
+  notify { "Hello there, Jesse": }
 }
