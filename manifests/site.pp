@@ -49,4 +49,7 @@ node default {
     ensure => file,
     owner => 'bocinskij',
     content => "learning about puppets", }
+  package { "cowsay":
+    ensure => preset,
+    provider => gem, }
 }
