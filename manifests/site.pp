@@ -50,6 +50,6 @@ node default {
     owner => 'bocinskij',
     content => "learning about puppets", }
   package { "cowsay":
-    ensure => preset,
+    ensure => present,
     provider => gem, }
 }
