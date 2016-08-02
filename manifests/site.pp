@@ -44,9 +44,9 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello there, Jesse": }
-  file { '/etc/motd':
+  file { 'motd':
     path => '/etc/motd',
     ensure => file,
     owner => 'bocinskij',
-    content => "learning about puppets",
+    content => "learning about puppets", }
 }
