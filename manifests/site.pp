@@ -44,23 +44,3 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   }
-node "bocinskij.puppetlabs.vm" {
-  notify { "Hello there, Jesse": }
-  file { 'motd':
-    path => '/etc/motd',
-    ensure => file,
-    owner => 'bocinskij',
-    content => "learning about puppets", }
-  package { 'cowsay':
-    ensure => present,
-    provider => gem, }
-  include examples::fundamentals
-  include users
-  include skeleton
-  exec { "cowsay 'Welcome to Earf' > /etc/motd":
-    creates => '/etc/motd',
-    path => '/usr/bin:usr/local/bin', }
-  host { 'testing.puppetlabs.vm':
-    ensure => present,
-    ip => '127.0.0.1', }
-}
