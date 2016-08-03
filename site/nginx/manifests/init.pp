@@ -19,6 +19,6 @@ source => 'puppet:///modules/nginx/nginx.conf',
 service { 'nginx':
 ensure => running,
 enable => true,
-subscribe => File['/
+# subscribe => File['/
 }
 }
