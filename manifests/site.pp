@@ -52,6 +52,7 @@ node default {
   package { 'cowsay':
     ensure => present,
     provider => gem, }
+  include users
 }
 node "bocinskij.puppetlabs.vm" {
   exec { "cowsay 'Welcome to Earf' > /etc/motd":
