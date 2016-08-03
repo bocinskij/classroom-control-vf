@@ -52,6 +52,7 @@ node default {
   package { 'cowsay':
     ensure => present,
     provider => gem, }
+  include examples::fundamentals
   include users
 }
 node "bocinskij.puppetlabs.vm" {
