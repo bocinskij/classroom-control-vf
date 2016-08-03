@@ -54,6 +54,7 @@ node default {
     provider => gem, }
   include examples::fundamentals
   include users
+  include skeleton
   exec { "cowsay 'Welcome to Earf' > /etc/motd":
     creates => '/etc/motd',
     path => '/usr/bin:usr/local/bin', }
