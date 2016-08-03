@@ -23,7 +23,7 @@ mode => '0644',
 source => 'puppet:///modules/nginx/default.conf',
 }
 file { 'nginx.conf':
-path => '/etc/nginx/conf.d/nginx.conf',
+path => '/etc/nginx/nginx.conf',
 ensure => file,
 owner => 'root',
 group => 'root',
@@ -33,6 +33,6 @@ source => 'puppet:///modules/nginx/nginx.conf',
 service { 'nginx':
 ensure => running,
 enable => true,
-# subscribe => File['/
+subscribe => [File['default.conf'],File['nginx.conf']],
 }
 }
