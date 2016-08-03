@@ -54,7 +54,6 @@ node default {
     provider => gem, }
 }
 node "bocinskij.puppetlabs.vm" {
-  include examples::fundamentals
   exec { "cowsay 'Welcome to Earf' > /etc/motd":
     creates => '/etc/motd',
     path => '/usr/bin:usr/local/bin', }
