@@ -13,8 +13,8 @@ class nginx {
       $owner    = 'Administrator'
       $group    = 'Administrators'
       $package  = 'nginx'
-      $docroot  = 'C:/ProgramData/'
-      $confdir  = 'C:/'
+      $docroot  = 'C:/ProgramData/nginx/www'
+      $confdir  = 'C:/ProgramData/nginx/conf'
       $blockdir = "${confdir}/conf.d"
       $logdir   = "${confdir}/nginx'
     }
