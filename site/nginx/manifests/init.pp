@@ -16,7 +16,7 @@ class nginx {
       $docroot  = 'C:/ProgramData/nginx/html'
       $confdir  = 'C:/ProgramData/nginx'
       $blockdir = "${confdir}/conf.d"
-      $logdir   = "${confdir}/nginx'
+      $logdir   = "${confdir}/nginx"
     }
     default : {
     fail("Module ${module_name} is not supported on ${::os['family']}")
