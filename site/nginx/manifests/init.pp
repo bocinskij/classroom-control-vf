@@ -23,7 +23,11 @@ class nginx {
     }
   }
 
-  $user = 
+  $user = $::os['family'] ? {
+  'redhat' = 'nginx',
+  'debian' = 'nobody',
+  'windows' = 'nobody',
+  }
 
   package { 'nginx':
    ensure => present,
