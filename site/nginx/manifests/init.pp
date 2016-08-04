@@ -13,8 +13,8 @@ class nginx {
       $owner    = 'Administrator'
       $group    = 'Administrators'
       $package  = 'nginx'
-      $docroot  = 'C:\ProgramData\'
-      $confdir  = '/etc/nginx'
+      $docroot  = 'C:/ProgramData/'
+      $confdir  = 'C:/'
       $blockdir = "${confdir}/conf.d"
       $logdir   = "${confdir}/nginx'
     }
@@ -23,7 +23,7 @@ class nginx {
     }
   }
 
-
+  $user = 
 
   package { 'nginx':
    ensure => present,
