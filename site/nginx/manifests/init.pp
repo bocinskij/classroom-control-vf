@@ -19,7 +19,7 @@ class nginx {
       $logdir   = "${confdir}/nginx'
     }
     default : {
-    fail("Module ${module_name} is not supported on ${os['family']}")
+    fail("Module ${module_name} is not supported on ${::os['family']}")
     }
   }
   $user = $::os['family'] ? {
