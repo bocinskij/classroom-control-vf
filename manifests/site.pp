@@ -43,6 +43,10 @@ node default {
   # Example:
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
+  if $::virtual {
+    notify { "This is a $::virtual virtual machine."
+    }
+  }
   include memcached
   include nginx
   }
