@@ -13,8 +13,8 @@ class nginx {
       $owner    = 'Administrator'
       $group    = 'Administrators'
       $package  = 'nginx'
-      $docroot  = 'C:/ProgramData/nginx/www'
-      $confdir  = 'C:/ProgramData/nginx/conf'
+      $docroot  = 'C:/ProgramData/nginx/html'
+      $confdir  = 'C:/ProgramData/nginx'
       $blockdir = "${confdir}/conf.d"
       $logdir   = "${confdir}/nginx'
     }
@@ -26,6 +26,7 @@ class nginx {
   'redhat' = 'nginx',
   'debian' = 'nobody',
   'windows' = 'nobody',
+  default = 'nobody',
   }
 
   package { 'nginx':
