@@ -23,10 +23,10 @@ class nginx {
     }
   }
   $user = $::os['family'] ? {
-  'redhat' = 'nginx',
-  'debian' = 'nobody',
-  'windows' = 'nobody',
-  default = 'nobody',
+  'redhat' => 'nginx',
+  'debian' => 'nobody',
+  'windows' => 'nobody',
+  default => 'nobody',
   }
 
   package { 'nginx':
