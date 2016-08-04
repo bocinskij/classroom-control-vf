@@ -22,7 +22,6 @@ class nginx {
     fail("Module ${module_name} is not supported on ${os['family']}")
     }
   }
-
   $user = $::os['family'] ? {
   'redhat' = 'nginx',
   'debian' = 'nobody',
