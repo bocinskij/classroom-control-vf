@@ -1,11 +1,11 @@
 class nginx (
-      $owner    = $nginx::params::owner
-      $group    = $nginx::params:: group
-      $package  = $nginx::params:: package
-      $docroot  = $nginx::params:: docroot
-      $confdir  = $nginx::params:: confdir
-      $blockdir = $nginx::params:: blockdir
-      $logdir   = $nginx::params:: logdir
+      $owner    = $nginx::params::owner,
+      $group    = $nginx::params:: group,
+      $package  = $nginx::params:: package,
+      $docroot  = $nginx::params:: docroot,
+      $confdir  = $nginx::params:: confdir,
+      $blockdir = $nginx::params:: blockdir,
+      $logdir   = $nginx::params:: logdir,
 )  inherets nginx::params {
   package { 'nginx':
    ensure => present,
