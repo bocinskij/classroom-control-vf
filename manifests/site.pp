@@ -50,4 +50,10 @@ node default {
   include memcached
   include nginx
   include users::admins
+  
+# hiera content
+  $message = hiera('message')
+  notify { $message }
+  
   }
+}
