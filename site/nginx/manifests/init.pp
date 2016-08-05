@@ -1,4 +1,6 @@
-class nginx {
+class nginx (
+
+)  inherets nginx::params {
   package { 'nginx':
    ensure => present,
   }
@@ -27,4 +29,4 @@ class nginx {
     enable => true,
     subscribe => [File['default.conf'],File['nginx.conf']],
   }
-}
+  }
