@@ -53,7 +53,7 @@ node default {
   
 # hiera content
   $message = hiera('message')
-  notify { $message }
+  notify { $message: }
   
   }
 }
