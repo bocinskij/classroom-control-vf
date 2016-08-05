@@ -1,3 +1,4 @@
+class nginx::params {
 case $::os['family'] {
     'redhat', 'debian' : {
       $owner    = 'root'
@@ -27,3 +28,4 @@ case $::os['family'] {
   'windows' => 'nobody',
   default => 'nobody',
   }
+}
