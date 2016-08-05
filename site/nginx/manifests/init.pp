@@ -6,7 +6,8 @@ class nginx (
       $confdir  = $nginx::params::confdir,
       $blockdir = $nginx::params::blockdir,
       $logdir   = $nginx::params::logdir,
-)  inherets nginx::params {
+) 
+inherits nginx::params {
   package { 'nginx':
    ensure => present,
   }
