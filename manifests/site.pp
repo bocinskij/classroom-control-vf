@@ -56,4 +56,3 @@ node default {
   notify { $message: }
   
   }
-}
